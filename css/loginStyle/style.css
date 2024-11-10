@@ -106,9 +106,69 @@ h2 {
 
 
 .hidden{
-    display: none;
+    display: none !important;
 }
 
-.darkMode{
-    background: rgba(0, 0, 0, 0.5);
+
+@media screen and (max-width: 768px) {
+    .login_container {
+        display: block;
+        width: 90%;
+        padding: 20px;
+        gap: 10px; 
+    }
+
+    .login_container input {
+        font-size: 14px; 
+        padding: 8px; 
+    }
+
+    .buttons-container {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .btn {
+        padding: 10px; 
+        font-size: 14px; 
+    }
+
+    .register_container {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+ 
+    .login_container img.logo {
+        width: 60px; 
+    }
+
+    .login_container h2 {
+        font-size: 16px; 
+    }
+
+    .close-button {
+        font-size: 16px; 
+        top: 5px; 
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .login_container {
+        padding: 15px; 
+        gap: 8px; 
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px; 
+    }
+
+    .login_container h2 {
+        font-size: 14px;
+    }
+
+    .login_container img.logo {
+        width: 50px; 
+    }
 }

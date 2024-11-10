@@ -97,9 +97,94 @@
 }
 
 .hidden{
-    display: none;
+    display: none !important;
 }
 
-.darkMode{
-    background: rgba(0, 0, 0, 0.5);
+@media screen and (max-width: 768px) {
+    .register_container {
+        width: 90%;
+        padding: 20px;
+        gap: 15px;
+        display: grid;
+        grid-template-columns: 1fr 2fr; 
+        align-items: center;
+    }
+
+    .register_container img.logo {
+        grid-column: span 2; 
+        width: 60px;
+        justify-self: center;
+    }
+
+    .register_container h2 {
+        grid-column: span 2; 
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .register_container label {
+        text-align: left;
+        font-size: 14px;
+        color: white;
+        margin-right: 10px;
+    }
+
+    .register_container input {
+        font-size: 14px;
+        padding: 8px;
+        border-radius: 8px;
+        border: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .register_container .buttons-container {
+        grid-column: span 2;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
 }
+
+@media screen and (max-width: 580px) {
+    .register_container {
+        padding: 15px;
+        gap: 10px;
+        grid-template-columns: 1fr 1.5fr;
+    }
+
+    .register_container input {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .register_container label {
+        font-size: 12px;
+    }
+
+    .register_container img.logo {
+        width: 50px;
+    }
+
+    .register_container h2 {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .buttons-container {
+        flex-direction: column; 
+        gap: 10px;
+    }
+}
+

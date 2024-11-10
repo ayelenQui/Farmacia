@@ -1,29 +1,18 @@
 function showLogin(){
-    closeRegister();
-    var login_container = document.getElementById("loginContainer");
-    login_container.classList.remove("hidden");
-    var body = document.body;
-    body.classList.add("darkMode");
+    document.getElementById("loginContainer").classList.remove("hidden");
+    document.getElementById("registerContainer").classList.add("hidden");
 }
 
 function closeLogin(){
-    var login_container = document.getElementById("loginContainer");
-    login_container.classList.add("hidden");
-    var body = document.body;
-    body.classList.remove("darkMode");
+    document.getElementById("loginContainer").classList.add("hidden");
 }
 
 function showRegister(){
-    closeLogin();
-    var register_container = document.getElementById("registerContainer");
-    register_container.classList.remove("hidden");
-    var body = document.body;
-    body.classList.add("darkMode");
+    document.getElementById("registerContainer").classList.remove("hidden");
+    document.getElementById("loginContainer").classList.add("hidden");
 }
 
 function closeRegister(){
-    var register_container = document.getElementById("registerContainer");
-    register_container.classList.add("hidden");
-    var body = document.body;
-    body.classList.remove("darkMode");
+    document.getElementById("registerContainer").classList.add("hidden");
 }
+
