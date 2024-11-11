@@ -1,0 +1,52 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+.divTitulo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor para centrar la tabla en la página */
+.divRecetas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 40px;
+}
+
+/* Fondo de color celeste claro y bordes redondeados */
+#tabla-recetas {
+    width: 80%;
+    max-width: 600px;
+    background-color: #e0f7fa;
+    border-radius: 8px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Estilos de encabezado */
+#tabla-recetas thead {
+    font-weight: bold;
+    background-color: #b2ebf2;
+}
+
+/* Bordes internos entre filas, sin bordes externos */
+#tabla-recetas .fila {
+    border-top: 1px solid #80deea;
+}
+
+/* Alineación de texto en las celdas */
+.columna {
+    padding: 12px;
+}
+
+.fotoReceta {
+    height: 80px;
+    width: auto;
+}
