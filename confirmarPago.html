@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confirmar Pago</title>
+<link rel="stylesheet" href="./css//confirmarPagoCarritoStyle/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body class="confirmar-pago">
+
+
+<!-- Barra de navegación -->
+<header class="navbar">
+    <a href="home.html"><img src="./img/logo.png" alt="Logo" class="logo"></a>
+    
+    <input type="text" placeholder="Buscar por producto, marca, categoría..." class="search-bar">
+    <div class="container-iconos">
+        <a href="" target="_blank" class="fa-regular fa-heart fa-2x mx-2 text-dark"></a>
+        <a href="" target="_blank" class="fa-regular fa-bell fa-2x mx-2 text-dark"></a>
+        <a href="carrito.html" class="fa-solid fa-basket-shopping fa-2x mx-2 text-dark"></a>
+        <a href="" target="_blank" class="fa-regular fa-user fa-2x mx-2 text-dark"></a>
+    </div>
+</header>
+
+<!-- Contenido principal -->
+<div class="container">
+    <!-- Sección de confirmación de pago -->
+    <div class="payment-form">
+        <h2>Confirma tu Compra</h2>
+        <p>Selecciona un método de pago</p>
+        <div class="payment-icons">
+            <a href=""><img src="./img/tarjeta.png" alt="Tarjeta"></a>
+            <a href=""><img src="./img/mercadopago.png" alt="mercadopago"></a>
+            <a href=""><img src="./img/trasnferencia.png" alt="Transferencia"></a>
+            
+            
+        </div>
+        
+        <form>
+            <div class="input-group">
+                <input type="text" placeholder="Nombre" required>
+                <input type="text" placeholder="Apellido" required>
+            </div>
+            
+            <input type="text" placeholder="Nombre titular de la tarjeta" required>
+            <br>
+            <br>
+            <div class="input-group">
+                <input type="text" placeholder="Número de tarjeta" required>
+                <input type="text" placeholder="CVV" required>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Dirección" required>
+                <input type="text" placeholder="Código Postal" required>
+            </div>
+            <button type="submit" class="btn-confirm">Confirmar Pago</button>
+            <a href="carrito.html"><button type="button" class="btn-cancel">Cancelar Compra</button></a>
+            
+        </form>
+    </div>
+
+    <!-- Resumen del carrito -->
+    <aside class="summary">
+        <h3>Tu Carrito</h3>
+        <div class="summary-item">
+            <img src="./img/ibu.png" alt="Ibuprofeno" class="product-image">
+            <div>
+                <h5>Ibuprofeno jarabe</h5>
+                <p class="price">$5000.00</p>
+            </div>
+        </div>
+        <hr>
+        <div class="summary-details">
+            <div class="detail-row">
+                <p>Subtotal</p>
+                <p>$5000.00</p>
+            </div>
+            <div class="detail-row">
+                <p>Envío</p>
+                <p>$2000.00</p>
+            </div>
+        </div>
+        <hr>
+        <div class="total">
+            <p>Total</p>
+            <p>$7000.00</p>
+        </div>
+</div>
+
+</body>
+</html>
