@@ -19,7 +19,7 @@
     
     <input type="text" placeholder="Buscar por producto, marca, categoría..." class="search-bar">
     <div class="container-iconos">
-        <a href="https://www.facebook.com" target="_blank" class="fa-regular fa-heart fa-2x mx-2 text-success"></a>
+        <a href="" target="_blank" class="fa-regular fa-heart fa-2x mx-2 text-success"></a>
           <a href="estadorecetas.html"  target="_blank" class="fa-regular fa-bell fa-2x mx-2 text-success"></a>
           <a href="#" onclick="showLogin()"  class="fa-regular fa-user fa-2x mx-2 text-success"></a>
           <a href="carrito.html" class="fa-solid fa-basket-shopping fa-2x mx-2 text-success"></a>
@@ -36,31 +36,47 @@
             <a href=""><img src="./img/tarjeta.png" alt="Tarjeta"></a>
             <a href=""><img src="./img/mercadopago.png" alt="mercadopago"></a>
             <a href=""><img src="./img/trasnferencia.png" alt="Transferencia"></a>
+            <a href=""><img src="./img/modo.webp" alt="" srcset=""></a>
             
             
         </div>
         
         <form>
+            <!-- Nombre y Apellido -->
             <div class="input-group">
                 <input type="text" placeholder="Nombre" required>
                 <input type="text" placeholder="Apellido" required>
             </div>
-            
-            <input type="text" placeholder="Nombre titular de la tarjeta" required>
-            <br>
-            <br>
-            <div class="input-group">
-                <input type="text" placeholder="Número de tarjeta" required>
-                <input type="text" placeholder="CVV" required>
-            </div>
+        
+            <!-- DNI -->
+            <input type="number" placeholder="DNI" required>
+            <br><br>
+        
+            <!-- Dirección y Código Postal -->
             <div class="input-group">
                 <input type="text" placeholder="Dirección" required>
-                <input type="text" placeholder="Código Postal" required>
+                <input type="number" placeholder="Código Postal" required>
             </div>
+        
+            <!-- Nombre del Titular -->
+            <input type="text" placeholder="Nombre del titular de la tarjeta" required>
+            <br><br>
+        
+            <!-- Número de Tarjeta -->
+            <input type="number" placeholder="Número de tarjeta" required>
+            <br><br>
+        
+            <!-- Fecha de Vencimiento y CVV -->
+            <div class="input-group">
+                <input type="number" placeholder="Fecha de Vencimiento (MM/AA)" required>
+                <input type="number" placeholder="CVV" required>
+            </div>
+        
+            <!-- Botones -->
             <button type="submit" class="btn-confirm">Confirmar Pago</button>
             <a href="carrito.html"><button type="button" class="btn-cancel">Cancelar Compra</button></a>
-            
         </form>
+        
     </div>
 
     <!-- Resumen del carrito -->
