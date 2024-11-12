@@ -7,169 +7,222 @@
     <!-- Vinculando Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/loginStyle/style.css">
     <link rel="stylesheet" href="css/registerStyle/style.css">
     <link rel="stylesheet" href="css/style.css">
-    
 </head>
 <body>
+
    <!-- Navbar -->
    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
     <div class="container-fluid">
-      <!-- Logo o Nombre de la farmacia -->
       <a href="home.html"><img src="img/Captura de pantalla 2024-11-10 134648.png" class="img-fluid" style="max-width: 100px; height: auto;"></a>
     <form class="d-flex w-50">
         <input class="form-control me-2" type="search" placeholder="Buscar por producto, marca, categoría..." aria-label="Search">
       <a class="btn btn-outline-success" type="submit" style="background-color: #28a745; color: white;">Buscar</a>
     </form>
-     
-        <!-- Iconos de redes sociales alineados a la derecha con espacios entre ellos -->
         <div class="d-flex justify-content-end">
             <a href="https://www.facebook.com" target="_blank" class="fa-regular fa-heart fa-2x mx-2 text-success"></a>
-            <a href="estadorecetas.html"  target="_blank" class="fa-regular fa-bell fa-2x mx-2 text-success"></a>
-            <a href="#" onclick="showLogin()"  class="fa-regular fa-user fa-2x mx-2 text-success"></a>
+            <a href="estadorecetas.html" target="_blank" class="fa-regular fa-bell fa-2x mx-2 text-success"></a>
+            <a href="#" onclick="showLogin()" class="fa-regular fa-user fa-2x mx-2 text-success"></a>
             <a href="carrito.html" class="fa-solid fa-basket-shopping fa-2x mx-2 text-success"></a>
         </div>
       </div>
     </div>
   </nav>
-       
-    
-    
 
-          
-          
-        <!-- Contenedor principal -->
-    <div class="container mt-5">
-        <h2 class="text-center mb-4">Cargar Receta Médica</h2>
+  <!-- Contenedor principal -->
+  <div class="container mt-5">
+      <!-- Barra de progreso para los pasos -->
+      <h4>Pasos para cargar tu receta:</h4>
+      <div class="progress mb-4 ">
+        <div class="progress-bar bg-success " id="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Paso 1: Adjuntar archivo</div>
+      </div>
 
-        <!-- Formulario para cargar receta -->
-        <form id="form-receta">
-            <div class="form-row">
-                <!-- Nombre y Apellido -->
-                <div class="form-group col-md-6">
-                    <label for="nombre">Nombre y Apellido</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Juan Pérez" required>
-                </div>
-                <!-- DNI -->
-                <div class="form-group col-md-6">
-                    <label for="dni">DNI</label>
-                    <input type="text" class="form-control" id="dni" placeholder="12345678" required>
-                </div>
-            </div>
-            <div class="form-row">
-                <!-- Día de prescripción -->
-                <div class="form-group col-md-6">
-                    <label for="fecha_prescripcion">Día de Prescripción</label>
-                    <input type="date" class="form-control" id="fecha_prescripcion" required>
-                </div>
-                <!-- Médico -->
-                <div class="form-group col-md-6">
-                    <label for="medico">Médico</label>
-                    <input type="text" class="form-control" id="medico" placeholder="Dr. Juan Gómez" required>
-                </div>
-            </div>
-            <div class="form-row">
-                <!-- Matrícula del médico -->
-                <div class="form-group col-md-6">
-                    <label for="matricula">Matrícula del Médico</label>
-                    <input type="text" class="form-control" id="matricula" placeholder="12345" required>
-                </div>
-                <!-- Obra Social -->
-                <div class="form-group col-md-6">
-                    <label for="obra_social">Obra Social</label>
-                    <input type="text" class="form-control" id="obra_social" placeholder="Obra Social XYZ" required>
-                </div>
-            </div>
-            <div class="form-row">
-                <!-- Número de obra social -->
-                <div class="form-group col-md-6">
-                    <label for="numero_obra_social">Número de Obra Social</label>
-                    <input type="text" class="form-control" id="numero_obra_social" placeholder="987654321" required>
-                </div>
-            </div>
-             <!-- Campo para cargar archivo (receta) -->
-             <div class="form-group">
-                <label for="receta">Cargar Receta Médica</label>
-                <input type="file" class="form-control-file" id="receta" required>
-                <small class="form-text text-muted">Adjunta una imagen o archivo PDF de tu receta médica.</small>
-            </div>
-            <!-- Botón para enviar -->
-            <div class="form-group text-center">
-                <button type="submit" class="btn btn-success btn-lg">Cargar Receta</button>
-            </div>
-             <!-- Botón para cancelar -->
-             <div class="form-group text-center">
-                <button type="submit" class="btn btn-success btn-xs">Cancelar</button>
-            </div>
-        </form>
-    </div>
+      <h2 class="text-center mb-4">Cargar Receta Médica</h2>
+      <p class="text-center mb-4">Por favor, adjunta tu receta médica en formato imagen o PDF, junto con los datos solicitados a continuación para enviarla a un profesional.</p>
 
-</div>
-    <!-- Modal (Pop-up de confirmación) -->
-    <div class="modal fade" id="modalGracias" tabindex="-1" role="dialog" aria-labelledby="modalGraciasLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalGraciasLabel">¡Muchas gracias!</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    El profesional va a revisar tu receta. Tu estado de la receta es: <strong>En espera</strong>.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
+      <!-- Formulario para cargar receta -->
+      <form id="form-receta">
+          <!-- Cuadro grande para cargar receta -->
+          <div class="border p-5 text-center mb-4" style="background-color: #f8f9fa;">
+              <h4 class="mb-4">Adjunta tu receta</h4>
+              <input type="file" class="form-control-file mx-auto" id="receta" required onchange="updateStep(2)">
+              <small class="form-text text-muted mt-2">Adjunta una imagen o archivo PDF de tu receta médica.</small>
+
+              <!-- Contenedor para vista previa de la imagen -->
+              <div id="image-preview-container" class="mt-4" style="display: none;">
+                  <p>Vista previa:</p>
+                  <img id="image-preview" src="#" alt="Vista previa de la receta" style="max-width: 100%; height: auto;">
+              </div>
+
+              <!-- Contenedor para mensaje si se carga un PDF -->
+              <div id="pdf-preview-container" class="mt-4" style="display: none;">
+                  <p>Se ha adjuntado un archivo PDF.</p>
+              </div>
+          </div>
+
+          <!-- Datos del paciente y receta -->
+          <div class="form-row mb-3">
+              <div class="form-group col-md-6">
+                  <label for="nombre">Nombre y Apellido</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Juan Pérez" required onchange="updateStep(3)">
+              </div>
+              <div class="form-group col-md-6">
+                  <label for="dni">DNI</label>
+                  <input type="text" class="form-control" id="dni" placeholder="12345678" required>
+              </div>
+          </div>
+
+          <div class="form-row mb-3">
+              <div class="form-group col-md-6">
+                  <label for="fecha_prescripcion">Fecha de la Receta</label>
+                  <input type="date" class="form-control" id="fecha_prescripcion" required>
+              </div>
+              <div class="form-group col-md-6">
+                  <label for="medico">Médico</label>
+                  <input type="text" class="form-control" id="medico" placeholder="Dr. Juan Gómez" required>
+              </div>
+          </div>
+
+        
+          <div class="form-row mb-3">
+              <div class="form-group col-md-6">
+                  <label for="obra_social">Obra Social</label>
+                  <input type="text" class="form-control" id="obra_social" placeholder="Obra Social XYZ" required>
+              </div>
+         
+             <div class="form-group col-md-6">
+                  <label for="numero_obra_social">Número de Socio </label>
+                  <input type="text" class="form-control" id="numero_obra_social" placeholder="987654321" required>
+              </div>
+          </div>
+
+          <!-- Botón para enviar -->
+          <div class="form-group text-center mb-3">
+              <button type="submit" class="btn btn-success btn-lg">Cargar Receta</button>
+          </div>
+
+          <!-- Botón para cancelar -->
+          <div class="form-group text-center mb-3">
+              <button type="reset" class="btn btn-danger btn-xs">Cancelar</button>
+          </div>
+      </form>
+  </div>
+
+  <!-- Modal (Pop-up de confirmación) -->
+  <div class="modal fade" id="modalGracias" tabindex="-1" role="dialog" aria-labelledby="modalGraciasLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="modalGraciasLabel">¡Muchas gracias!</h5>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  El profesional va a revisar tu receta. Tu estado de la receta es: <strong>En espera</strong>.
+              </div>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeModalBtn">Cerrar</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-dark py-5 mt-4">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-12 mb-5">
+          <a href="https://www.facebook.com" target="_blank "><p class="text-dark">Contacto</p></a>
+          <a href="https://www.facebook.com" target="_blank "><p class="text-dark">Quienes somos</p></a>
         </div>
-    </div>
-
-     <!-- Footer -->
-  
-    <footer class="bg-light text-dark py-5 mt-4">
-      <div class="container text-center">
-        <div class="row">
-          <!-- Redes sociales -->
-          <div class="col-12 mb-5">
-           
-            <a href="https://www.facebook.com" target="_blank "><p class="text-dark ">Contacto</p></a>
-            <a href="https://www.facebook.com" target="_blank "><p class="text-dark">Quienes somos</p></a>
-           
-          </div>
-          <!-- Redes sociales -->
-          <div class="col-12 mb-5 container text-start">
-            <a href="https://www.instagram.com" target="_blank" class="fab fa-facebook fa-2x mx-3 text-success"></a>
-            <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram fa-2x mx-3 text-success"></a>
-            <a href="https://www.whatsapp.com" target="_blank" class="fab fa-whatsapp fa-2x mx-3 text-success"></a>
-            
-          </div>
-        </div>
-        <div class="row">
-          <!-- Información adicional (ej. Derechos de autor) -->
-          <div class="col-12">
-            <p class="mb-0">&copy; 2024 Farmacia Nombre - Todos los derechos reservados.</p>
-          </div>
+        <div class="col-12 mb-5 container text-start">
+          <a href="https://www.instagram.com" target="_blank" class="fab fa-facebook fa-2x mx-3 text-success"></a>
+          <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram fa-2x mx-3 text-success"></a>
+          <a href="https://www.whatsapp.com" target="_blank" class="fab fa-whatsapp fa-2x mx-3 text-success"></a>
         </div>
       </div>
-    </footer>
-    <script>
-        // Evitar el envío real del formulario y mostrar el modal
-        document.getElementById("form-receta").addEventListener("submit", function(event) {
-            event.preventDefault();  // Prevenir que el formulario se envíe de forma normal
-            var myModal = new bootstrap.Modal(document.getElementById('modalGracias'));
-            myModal.show();  // Mostrar el modal con el mensaje
+      <div class="row">
+        <div class="col-12">
+          <p class="mb-0">&copy; 2024 TuFarmacia.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script para actualizar el progreso -->
+  <script>
+    function updateStep(step) {
+        const progressBar = document.getElementById('progress-bar');
+        
+        // Paso 1: Si se adjunta un archivo
+        if (step === 2) {
+            progressBar.style.width = '66%';
+            progressBar.setAttribute('aria-valuenow', 66);
+            progressBar.textContent = 'Paso 2: Completar formulario';
+        }
+        
+        // Paso 2: Si se completa el formulario
+        if (step === 3) {
+            progressBar.style.width = '100%';
+            progressBar.setAttribute('aria-valuenow', 100);
+            progressBar.textContent = 'Paso 3: Confirmar receta';
+        }
+    }
+
+    // Previsualización del archivo adjunto
+    document.getElementById('receta').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+        
+        reader.onload = function(e) {
+            const previewContainer = document.getElementById('image-preview-container');
+            const pdfPreviewContainer = document.getElementById('pdf-preview-container');
+            const imagePreview = document.getElementById('image-preview');
+            
+            if (file.type === 'application/pdf') {
+                previewContainer.style.display = 'none';
+                pdfPreviewContainer.style.display = 'block';
+            } else {
+                previewContainer.style.display = 'block';
+                pdfPreviewContainer.style.display = 'none';
+                imagePreview.src = e.target.result;
+            }
+        }
+        
+        reader.readAsDataURL(file);
+    });
+
+   
+    // Función para mostrar el modal después de enviar el formulario
+    document.getElementById("form-receta").addEventListener("submit", function(event) {
+        event.preventDefault();  // Prevenir que el formulario se envíe de forma normal
+
+        // Mostrar el modal con el mensaje de gracias
+        var myModal = new bootstrap.Modal(document.getElementById('modalGracias'));
+        myModal.show();  // Mostrar el modal
+
+          // Manejador para cerrar el modal y enviar el formulario
+          document.getElementById("closeModalBtn").addEventListener("click", function() {
+        
+            document.getElementById("form-receta").submit();
+
+           
+             location.reload(); 
+            
         });
-    </script>
- 
-</body>
-</html>
-    <!-- Vinculando los scripts de Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    
+    });
+
+
+  </script>
+
+  <!-- Vinculando los scripts de Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
