@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vista home</title>
     <!-- Vinculando Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Vinculando Bootstrap CSS (Versión 5) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
     <link rel="stylesheet" href="css/loginStyle/style.css">
     <link rel="stylesheet" href="css/registerStyle/style.css">
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .text-success {
+            color: #28a745 !important;
+        }
+    </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -23,14 +29,16 @@
     </form>
      
         <!-- Iconos de redes sociales alineados a la derecha con espacios entre ellos -->
-        <div class="d-flex justify-content-end">
-          <a href="https://www.facebook.com" class="fa-regular fa-heart fa-2x mx-2 text-success"></a>
-          <a href="estadorecetas.html"   class="fa-regular fa-bell fa-2x mx-2 text-success"></a>
-          <a href="#" onclick="showLogin()"  class="fa-regular fa-user fa-2x mx-2 text-success"></a>
-          <a href="carrito.html" class="fa-solid fa-basket-shopping fa-2x mx-2 text-success"></a>
-        </div>
+            <div class="d-flex gap-3">
+                <a href="https://www.facebook.com" target="_blank" class="fa-regular fa-heart fa-2x text-success" style="text-decoration: none;"></a>
+                <a href="carrito.html" class="fa-regular fa-basket-shopping fa-2x text-success" style="text-decoration: none;"></a>
+                <a href="estadorecetas.html" target="_blank" class="fa-regular fa-bell fa-2x text-success" style="text-decoration: none;"></a>
+                <a href="#" onclick="showLogin()" class="fa-regular fa-user fa-2x text-success" style="text-decoration: none;"></a>
+            </div>
+        
+        
       </div>
-    </div>
+
   </nav>
   <div style="background: linear-gradient(to right, #7ed957, #0097b2)">
       
@@ -124,7 +132,7 @@
         </a>
     </div>
 
-    <h2 class="text-start mt-3 ;position-absolute top-50 start-50 ">Más Vendidos</h2>
+    <h2 class="text-center mt-5 ;">Más Vendidos</h2>
 
  
 <!-- Tarjetas con imágenes -->
@@ -133,62 +141,56 @@
         <!-- Tarjeta 1 -->
         <div class="col-md-3">
             <div class="card border-0 position-relative">
-                <!-- Título alineado a la izquierda -->
-                <h5 class="card-title text-start ms-3">Actron 2%</h5>
+                <!-- Contenedor para el título y el corazón -->
+                <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+                    <h5 class="card-title mb-0">Actron 2%</h5>
+                    <button class="favorite-btn border-0 bg-white" onclick="toggleHeart(this)">
+                        <i class="fa-regular fa-heart text-dark fa-2x"></i>
+                    </button>     
+                </div>
 
                 <!-- Imagen -->
                 <img src="img/ACTRON pedia╠ütrico 4%_2.png" class="card-img-top" alt="Imagen 1">
 
-                <!-- Corazón a la izquierda, ajustado con position-absolute -->
-                <button class="favorite-btn border-0 bg-white position-absolute top-0 start-0 ms-3 mt-3">
-                    <i class="fa-regular fa-heart text-dark fa-2x"></i>
-                </button>
-
                 <!-- Botón en la parte inferior de la tarjeta -->
                 <div class="card-body">
-                    <button type="button" class="btn btn-dark w-100">Ir al carrito</button>
+                    <button type="button" class="btn btn-dark w-100">Comprar</button>
                 </div>
+                
             </div>
         </div>
 
         <!-- Tarjeta 2 -->
         <div class="col-md-3">
             <div class="card border-0 position-relative">
-                <!-- Título alineado a la izquierda -->
-                <h5 class="card-title text-start ms-3">Etidiol 2%</h5>
-
-                <!-- Imagen -->
-                <img src="img/Etidol-Suspension-Ibuprofeno-200-mg-B.jpg" class="card-img-top" alt="Imagen 2">
-
-                <!-- Corazón a la izquierda, ajustado con position-absolute -->
-                <button class="favorite-btn border-0 bg-white position-absolute top-0 start-0 ms-3 mt-3">
-                    <i class="fa-regular fa-heart text-dark fa-2x"></i>
-                </button>
-
-                <!-- Botón en la parte inferior de la tarjeta -->
-                <div class="card-body">
-                    <button type="button" class="btn btn-dark w-100">Ir al carrito</button>
+                <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+                    <h5 class="card-title mb-0">Etidiol 2%</h5>
+                    <button class="favorite-btn border-0 bg-white" onclick="toggleHeart(this)">
+                        <i class="fa-regular fa-heart text-dark fa-2x"></i>
+                    </button>
+                    
                 </div>
+                <img src="img/Etidol-Suspension-Ibuprofeno-200-mg-B.jpg" class="card-img-top" alt="Imagen 2">
+                <div class="card-body">
+                    <button type="button" class="btn btn-dark w-100">Comprar</button>
+                </div>
+                
             </div>
         </div>
 
         <!-- Tarjeta 3 -->
         <div class="col-md-3">
             <div class="card border-0 position-relative">
-                <!-- Título alineado a la izquierda -->
-                <h5 class="card-title text-start ms-3">Ibucare 2%</h5>
-
-                <!-- Imagen -->
+                <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+                    <h5 class="card-title mb-0">Ibucare 2%</h5>
+                    <button class="favorite-btn border-0 bg-white" onclick="toggleHeart(this)">
+                        <i class="fa-regular fa-heart text-dark fa-2x"></i>
+                    </button>
+                    
+                </div>
                 <img src="img/ibuprofeno-suspension-oral-caja-frasco.png" class="card-img-top" alt="Imagen 3">
-
-                <!-- Corazón a la izquierda, ajustado con position-absolute -->
-                <button class="favorite-btn border-0 bg-white position-absolute top-0 start-0 ms-3 mt-3">
-                    <i class="fa-regular fa-heart text-dark fa-2x"></i>
-                </button>
-
-                <!-- Botón en la parte inferior de la tarjeta -->
                 <div class="card-body">
-                    <button type="button" class="btn btn-dark w-100">Ir al carrito</button>
+                    <button type="button" class="btn btn-dark w-100">Comprar</button>
                 </div>
             </div>
         </div>
@@ -196,147 +198,122 @@
         <!-- Tarjeta 4 -->
         <div class="col-md-3">
             <div class="card border-0 position-relative">
-                <!-- Título alineado a la izquierda -->
-                <h5 class="card-title text-start ms-3">Fabogesic 2%</h5>
-
-                <!-- Imagen -->
+                <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+                    <h5 class="card-title mb-0">Fabogesic 2%</h5>
+                    <button class="favorite-btn border-0 bg-white" onclick="toggleHeart(this)">
+                        <i class="fa-regular fa-heart text-dark fa-2x"></i>
+                    </button>
+                    
+                </div>
                 <img src="img/product_b5e6a3f1788745d18d876ebb06588ee2_637450051513139304_0_m.jpg" class="card-img-top" alt="Imagen 4">
-
-                <!-- Corazón a la izquierda, ajustado con position-absolute -->
-                <button class="favorite-btn border-0 bg-white position-absolute top-0 start-0 ms-3 mt-3">
-                    <i class="fa-regular fa-heart text-dark fa-2x"></i>
-                </button>
-
-                <!-- Botón en la parte inferior de la tarjeta -->
                 <div class="card-body">
-                    <button type="button" class="btn btn-dark w-100">Ir al carrito</button>
+                    <button type="button" class="btn btn-dark w-100">Comprar</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-</div>
+
 
     <h3 class="text-center mt-5 mb-1">Comprá desde la comodidad de tu hogar en solo 4 pasos</h2>
 
 <!-- Puedes usar una clase contenedora más grande para dar más espacio -->
-<div class="container-fluid mt-5 py-2">
+<div class="container-fluid mt-5 py-4 bg-white">
     <div class="row justify-content-center">
+        <!-- Imagen pasos -->
         <div class="col-md-8">
-            <div class="card mt-4 border-0">
-                <img src="img/pasos2.png" class="card-img-top img-fluid" alt="Imagen sola horizontal">
-            </div>
+            <img src="img/pasos2.png" class="img-fluid mb-4" alt="Imagen sola horizontal">
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <!-- Imagen medios de pago -->
+        <div class="col-md-12">
+            <img src="img/Captura de pantalla 2024-11-09 111654.png" class="img-fluid" alt="Imagen sola horizontal">
         </div>
     </div>
 </div>
 
-  <!-- Imagen sola horizontal medios de pago -->
-  <div class="container-fluid mt-5 py-2">
-    <div class="row justify-content-center">
-        <div class="col-md-12_">
-            <div class="card mt-4 border-0">
-                <img src="img/Captura de pantalla 2024-11-09 111654.png" class="card-img-top" alt="Imagen sola horizontal">
-                <div class="card-body">
-                  
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <div style="background: linear-gradient(to right, #7ed957, #0097b2); padding: 20px;">
-<h2 class="text-start mb-1 ">Inspirado en lo último que viste</h2>
+<h2 class="text-center mt-4 ">Inspirado en lo último que viste</h2>
 
     <!-- Tarjetas con imagenes te puede interesar-->
-<<!-- Tarjetas con imágenes -->
-<div class="container mt-5">
-    <div class="row">
-        <!-- Tarjeta 1 -->
-        <div class="col-md-3">
-            <div class="card border-0 position-relative">
-                <!-- Título alineado a la izquierda -->
-                <h5 class="card-title text-start ms-3">Actron 2%</h5>
-
-                <!-- Imagen -->
-                <img src="img/ACTRON pedia╠ütrico 4%_2.png" class="card-img-top" alt="Imagen 1">
-
-                <!-- Corazón a la izquierda, ajustado con position-absolute -->
-                <button class="favorite-btn border-0 bg-white position-absolute top-0 start-0 ms-3 mt-3">
-                    <i class="fa-regular fa-heart text-dark fa-2x"></i>
-                </button>
-
-                <!-- Botón en la parte inferior de la tarjeta -->
-                <div class="card-body">
-                    <button type="button" class="btn btn-dark w-100">Ir al carrito</button>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Tarjeta 1 -->
+            <div class="col-md-3">
+                <div class="card border-0 position-relative">
+                    <!-- Contenedor para el título y el corazón -->
+                    <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+                        <h5 class="card-title mb-0">Actron 2%</h5>
+                        <button class="favorite-btn border-0 bg-white" onclick="toggleHeart(this)">
+                            <i class="fa-regular fa-heart text-dark fa-2x"></i>
+                        </button>
+                        
+                    </div>
+    
+                    <!-- Imagen -->
+                    <img src="img/ACTRON pedia╠ütrico 4%_2.png" class="card-img-top" alt="Imagen 1">
+    
+                    <!-- Botón en la parte inferior de la tarjeta -->
+                    <div class="card-body">
+                        <button type="button" class="btn btn-dark w-100">Comprar</button>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Tarjeta 2 -->
-        <div class="col-md-3">
-            <div class="card border-0 position-relative">
-                <!-- Título alineado a la izquierda -->
-                <h5 class="card-title text-start ms-3">Etidiol 2%</h5>
-
-                <!-- Imagen -->
-                <img src="img/Etidol-Suspension-Ibuprofeno-200-mg-B.jpg" class="card-img-top" alt="Imagen 2">
-
-                <!-- Corazón a la izquierda, ajustado con position-absolute -->
-                <button class="favorite-btn border-0 bg-white position-absolute top-0 start-0 ms-3 mt-3">
-                    <i class="fa-regular fa-heart text-dark fa-2x"></i>
-                </button>
-
-                <!-- Botón en la parte inferior de la tarjeta -->
-                <div class="card-body">
-                    <button type="button" class="btn btn-dark w-100">Ir al carrito</button>
+    
+            <!-- Tarjeta 2 -->
+            <div class="col-md-3">
+                <div class="card border-0 position-relative">
+                    <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+                        <h5 class="card-title mb-0">Etidiol 2%</h5>
+                        <button class="favorite-btn border-0 bg-white" onclick="toggleHeart(this)">
+                            <i class="fa-regular fa-heart text-dark fa-2x"></i>
+                        </button>
+                        
+                    </div>
+                    <img src="img/Etidol-Suspension-Ibuprofeno-200-mg-B.jpg" class="card-img-top" alt="Imagen 2">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-dark w-100">Comprar</button>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Tarjeta 3 -->
-        <div class="col-md-3">
-            <div class="card border-0 position-relative">
-                <!-- Título alineado a la izquierda -->
-                <h5 class="card-title text-start ms-3">Bagohepat</h5>
-
-                <!-- Imagen -->
-                <img src="img/bagohepat-gts-x-45-ml.jpg" class="card-img-top" alt="Imagen 3">
-
-                <!-- Corazón a la izquierda, ajustado con position-absolute -->
-                <button class="favorite-btn border-0 bg-white position-absolute top-0 start-0 ms-3 mt-3">
-                    <i class="fa-regular fa-heart text-dark fa-2x"></i>
-                </button>
-
-                <!-- Botón en la parte inferior de la tarjeta -->
-                <div class="card-body">
-                    <button type="button" class="btn btn-dark w-100">Ir al carrito</button>
+    
+            <!-- Tarjeta 3 -->
+            <div class="col-md-3">
+                <div class="card border-0 position-relative">
+                    <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+                        <h5 class="card-title mb-0">Bagohepat</h5>
+                        <button class="favorite-btn border-0 bg-white" onclick="toggleHeart(this)">
+                            <i class="fa-regular fa-heart text-dark fa-2x"></i>
+                        </button>
+                        
+                    </div>
+                    <img src="img/bagohepat-gts-x-45-ml.jpg" class="card-img-top" alt="Imagen 3">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-dark w-100">Comprar</button>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Tarjeta 4 -->
-        <div class="col-md-3">
-            <div class="card border-0 position-relative">
-                <!-- Título alineado a la izquierda -->
-                <h5 class="card-title text-start ms-3">Benzocaina</h5>
-
-                <!-- Imagen -->
-                <img src="img/Benzocaina.png" class="card-img-top" alt="Imagen 4">
-
-                <!-- Corazón a la izquierda, ajustado con position-absolute -->
-                <button class="favorite-btn border-0 bg-white position-absolute top-0 start-0 ms-3 mt-3">
-                    <i class="fa-regular fa-heart text-dark fa-2x"></i>
-                </button>
-
-                <!-- Botón en la parte inferior de la tarjeta -->
-                <div class="card-body">
-                    <button type="button" class="btn btn-dark w-100">Ir al carrito</button>
+    
+            <!-- Tarjeta 4 -->
+            <div class="col-md-3">
+                <div class="card border-0 position-relative">
+                    <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+                        <h5 class="card-title mb-0">Benzocaina</h5>
+                        <button class="favorite-btn border-0 bg-white" onclick="toggleHeart(this)">
+                            <i class="fa-regular fa-heart text-dark fa-2x"></i>
+                        </button>
+                        
+                    </div>
+                    <img src="img/Benzocaina.png" class="card-img-top" alt="Imagen 4">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-dark w-100">Comprar</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
+    
      <!-- Footer -->
   
     <footer class="bg-light text-dark py-5 mt-4">
@@ -344,18 +321,21 @@
         <div class="row">
           <!-- Redes sociales -->
           <div class="col-12 mb-5">
-           
-            <a href="https://www.facebook.com" target="_blank "><p class="text-dark ">Contacto</p></a>
-            <a href="https://www.facebook.com" target="_blank "><p class="text-dark">Quienes somos</p></a>
-           
+            <a href="https://www.facebook.com" style="text-decoration: none;">
+              <p class="text-success">Contacto</p>
+            </a>
+            <a href="https://www.facebook.com" style="text-decoration: none;">
+              <p class="text-success">Quienes somos</p>
+            </a>
           </div>
+          
           <!-- Redes sociales -->
-          <div class="col-12 mb-5 container text-start">
-            <a href="https://www.instagram.com" target="_blank" class="fab fa-facebook fa-2x mx-3 text-success"></a>
-            <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram fa-2x mx-3 text-success"></a>
-            <a href="https://www.whatsapp.com" target="_blank" class="fab fa-whatsapp fa-2x mx-3 text-success"></a>
-            
+          <div class="col-12 mb-5 container text-center">
+            <a href="https://www.instagram.com" target="_blank" class="fab fa-facebook fa-2x mx-3 text-success" style="text-decoration: none;"></a>
+            <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram fa-2x mx-3 text-success" style="text-decoration: none;"></a>
+            <a href="https://www.whatsapp.com" target="_blank" class="fab fa-whatsapp fa-2x mx-3 text-success" style="text-decoration: none;"></a>
           </div>
+          
         </div>
         <div class="row">
           <!-- Información adicional (ej. Derechos de autor) -->
@@ -365,10 +345,22 @@
         </div>
       </div>
     </footer>
+    <script>
+        function toggleHeart(button) {
+            const icon = button.querySelector('i');
+    
+            // Alternar entre corazón vacío (fa-regular) y relleno (fa-solid)
+            if (icon.classList.contains('fa-regular')) {
+                icon.classList.remove('fa-regular', 'text-dark');
+                icon.classList.add('fa-solid', 'text-success');
+            } else {
+                icon.classList.remove('fa-solid', 'text-success');
+                icon.classList.add('fa-regular', 'text-dark');
+            }
+        }
+    </script>
+    
 
- 
-</body>
-</html>
     <!-- Vinculando los scripts de Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
