@@ -24,18 +24,16 @@
      
         <!-- Iconos de redes sociales alineados a la derecha con espacios entre ellos -->
         <div class="d-flex justify-content-end">
-          <a href="https://www.facebook.com" target="_blank" class="fa-regular fa-heart fa-2x mx-2 text-success"></a>
-          <a href="estadorecetas.html"  target="_blank" class="fa-regular fa-bell fa-2x mx-2 text-success"></a>
+          <a href="https://www.facebook.com" class="fa-regular fa-heart fa-2x mx-2 text-success"></a>
+          <a href="estadorecetas.html"   class="fa-regular fa-bell fa-2x mx-2 text-success"></a>
           <a href="#" onclick="showLogin()"  class="fa-regular fa-user fa-2x mx-2 text-success"></a>
           <a href="carrito.html" class="fa-solid fa-basket-shopping fa-2x mx-2 text-success"></a>
         </div>
       </div>
     </div>
   </nav>
+  <div style="background: linear-gradient(to right, #7ed957, #0097b2)">
       
-       <!-- color al main -->
-       <div style="background: linear-gradient(to right, #7ed957, #0097b2); padding: 20px;">
-
         <!--loginView-->
         <div id="loginContainer" class="login_container hidden">
           <div class="close-button" onclick="closeLogin()">✖</div>
@@ -128,90 +126,113 @@
 
     <h2 class="text-start mt-3 ;position-absolute top-50 start-50 ">Más Vendidos</h2>
 
-    <!-- Tarjetas con imagenes-->
-    <div class="container mt-5">
-        <div class="row">
-            <!-- Tarjeta 1 -->
-            <div class="col-md-3 justify-content-center">
-                <div class="card border-0">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <!-- titulo a la derecha -->
-                    <h5 class="card-title mb-1">Actron 4%</h5>
-                    <!-- corazon a la izquierda -->
+ 
+<!-- Tarjetas con imágenes -->
+<div class="container mt-5">
+    <div class="row">
+        <!-- Tarjeta 1 -->
+        <div class="col-md-3">
+            <div class="card border-0 position-relative">
+                <!-- Título alineado a la izquierda -->
+                <h5 class="card-title text-start ms-3">Actron 2%</h5>
+
+                <!-- Imagen -->
+                <img src="img/ACTRON pedia╠ütrico 4%_2.png" class="card-img-top" alt="Imagen 1">
+
+                <!-- Corazón a la izquierda, ajustado con position-absolute -->
+                <button class="favorite-btn border-0 bg-white position-absolute top-0 start-0 ms-3 mt-3">
                     <i class="fa-regular fa-heart text-dark fa-2x"></i>
-                </div>
-                    <img src="img/ACTRON pedia╠ütrico 4%_2.png" class="card-img-top" alt="Imagen 1">
-                    <div class="card-body justify-content-center">
-                         <button type="button" class="btn btn-dark justify-content-center ">Ir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Tarjeta 2 -->
-            <div class="col-md-3 justify-content-center">
-              <div class="card border-0">
-                <div class="d-flex justify-content-between align-items-center">
-                  <!-- titulo a la derecha -->
-                  <h5 class="card-title mb-1">Etidiol 4%</h5>
-                  <!-- corazon a la izquierda -->
-                  <i class="fa-regular fa-heart text-dark fa-2x"></i>
-              </div>
-                  <img src="img/Etidol-Suspension-Ibuprofeno-200-mg-B.jpg" class="card-img-top" alt="Imagen 1">
-                  <div class="card-body justify-content-center">
-                       <button type="button" class="btn btn-dark justify-content-center ">Ir al carrito</button>
-                  </div>
-              </div>
-          </div>
-            <!-- Tarjeta 3 -->
-            <div class="col-md-3 justify-content-center">
-              <div class="card border-0">
-                <div class="d-flex justify-content-between align-items-center">
-                  <!-- titulo a la derecha -->
-                  <h5 class="card-title mb-1">Ibucare 4%</h5>
-                  <!-- corazon a la izquierda -->
-                  <i class="fa-regular fa-heart text-dark fa-2x"></i>
-              </div>
-                  <img src="img/ibuprofeno-suspension-oral-caja-frasco.png" class="card-img-top" alt="Imagen 1">
-                  <div class="card-body justify-content-center">
-                       <button type="button" class="btn btn-dark justify-content-center ">Ir al carrito</button>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-3 justify-content-center">
-            <div class="card border-0">
-              <div class="d-flex justify-content-between align-items-center">
-                <!-- titulo a la derecha -->
-                <h5 class="card-title mb-1">Fabogesic 4%</h5>
-                <!-- corazon a la izquierda -->
-                <i class="fa-regular fa-heart text-dark fa-2x"></i>
-            </div>
-                <img src="img/product_b5e6a3f1788745d18d876ebb06588ee2_637450051513139304_0_m.jpg" class="card-img-top" alt="Imagen 1">
-                <div class="card-body justify-content-center">
-                     <button type="button" class="btn btn-dark justify-content-center ">Ir al carrito</button>
+                </button>
+
+                <!-- Botón en la parte inferior de la tarjeta -->
+                <div class="card-body">
+                    <button type="button" class="btn btn-dark w-100">Ir al carrito</button>
                 </div>
             </div>
         </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="col-md-3">
+            <div class="card border-0 position-relative">
+                <!-- Título alineado a la izquierda -->
+                <h5 class="card-title text-start ms-3">Etidiol 2%</h5>
+
+                <!-- Imagen -->
+                <img src="img/Etidol-Suspension-Ibuprofeno-200-mg-B.jpg" class="card-img-top" alt="Imagen 2">
+
+                <!-- Corazón a la izquierda, ajustado con position-absolute -->
+                <button class="favorite-btn border-0 bg-white position-absolute top-0 start-0 ms-3 mt-3">
+                    <i class="fa-regular fa-heart text-dark fa-2x"></i>
+                </button>
+
+                <!-- Botón en la parte inferior de la tarjeta -->
+                <div class="card-body">
+                    <button type="button" class="btn btn-dark w-100">Ir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="col-md-3">
+            <div class="card border-0 position-relative">
+                <!-- Título alineado a la izquierda -->
+                <h5 class="card-title text-start ms-3">Ibucare 2%</h5>
+
+                <!-- Imagen -->
+                <img src="img/ibuprofeno-suspension-oral-caja-frasco.png" class="card-img-top" alt="Imagen 3">
+
+                <!-- Corazón a la izquierda, ajustado con position-absolute -->
+                <button class="favorite-btn border-0 bg-white position-absolute top-0 start-0 ms-3 mt-3">
+                    <i class="fa-regular fa-heart text-dark fa-2x"></i>
+                </button>
+
+                <!-- Botón en la parte inferior de la tarjeta -->
+                <div class="card-body">
+                    <button type="button" class="btn btn-dark w-100">Ir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="col-md-3">
+            <div class="card border-0 position-relative">
+                <!-- Título alineado a la izquierda -->
+                <h5 class="card-title text-start ms-3">Fabogesic 2%</h5>
+
+                <!-- Imagen -->
+                <img src="img/product_b5e6a3f1788745d18d876ebb06588ee2_637450051513139304_0_m.jpg" class="card-img-top" alt="Imagen 4">
+
+                <!-- Corazón a la izquierda, ajustado con position-absolute -->
+                <button class="favorite-btn border-0 bg-white position-absolute top-0 start-0 ms-3 mt-3">
+                    <i class="fa-regular fa-heart text-dark fa-2x"></i>
+                </button>
+
+                <!-- Botón en la parte inferior de la tarjeta -->
+                <div class="card-body">
+                    <button type="button" class="btn btn-dark w-100">Ir al carrito</button>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
-    
-    <h2 class="text-center mt-5 mb-1">Comprá desde la comodidad de tu hogar en solo 4 pasos</h2>
+</div>
+</div>
 
-    <div class="container mt-5">
-      <div class="row justify-content-center">
-          <div class="col-md-10">
-              <div class="card mt-4 border-0">
-                  <img src="img/paso.png" class="card-img-top img-fluid" alt="Imagen sola horizontal">
-                  <div class="card-body">
-                      <!-- Contenido de la tarjeta si lo necesitas -->
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  
+    <h3 class="text-center mt-5 mb-1">Comprá desde la comodidad de tu hogar en solo 4 pasos</h2>
+
+<!-- Puedes usar una clase contenedora más grande para dar más espacio -->
+<div class="container-fluid mt-5 py-2">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mt-4 border-0">
+                <img src="img/pasos2.png" class="card-img-top img-fluid" alt="Imagen sola horizontal">
+            </div>
+        </div>
+    </div>
+</div>
+
   <!-- Imagen sola horizontal medios de pago -->
-  <div class="container mt-5">
-    <div class="row">
+  <div class="container-fluid mt-5 py-2">
+    <div class="row justify-content-center">
         <div class="col-md-12_">
             <div class="card mt-4 border-0">
                 <img src="img/Captura de pantalla 2024-11-09 111654.png" class="card-img-top" alt="Imagen sola horizontal">
@@ -227,56 +248,95 @@
 <h2 class="text-start mb-1 ">Inspirado en lo último que viste</h2>
 
     <!-- Tarjetas con imagenes te puede interesar-->
-    <div class="container mt-5 ">
-      <div class="row ">
-          <!-- Tarjeta 1 -->
-          <div class="col-md-3 ">
-              <div class="card  border-0 ">
-                  <i class="fa-regular fa-heart text-dark fa-1x justify-content-end mt-1 margin-right 2"></i>
-                  <h5 class="card-title text-start ms-3">Unifresh </h5>
-                  <img src="img/Solucion-Salina-x-360ml-UNIFRESH-SOLUCION-SALINA-360-ML-1.png" class="card-img-top" alt="Imagen 1">
-                  <div class="card-body">
-                       <button type="button" class="btn btn-dark">Ir al carrito</button>
-                  </div>
-              </div>
-          </div>
-          <!-- Tarjeta 2 -->
-          <div class="col-md-3">
-              <div class="card border-0">
-                  <i class="fa-regular fa-heart text-dark fa-1x justify-content-end mt-1 margin-right 2"></i>
-                   <h5 class="card-title text-start ms-3">Tafirol</h5>
-                  <img src="img/Tafirol-resaca.png" class="card-img-top" alt="Imagen 2">
-                  <div class="card-body">
-                      <button type="button" class="btn btn-dark">Ir al carrito</button>
-                  </div>
-              </div>
-          </div>
-         
-          <!-- Tarjeta 3 -->
-          <div class="col-md-3">
-              <div class="card border-0">
-                  <i class="fa-regular fa-heart text-dark fa-1x justify-content-end mt-1 margin-right 2"></i>
-                  <h5 class="card-title text-start ms-3">Fabogesic 2%</h5>
-                  <img src="img/product_b5e6a3f1788745d18d876ebb06588ee2_637450051513139304_0_m.jpg" class="card-img-top" alt="Imagen 3">
-                  <div class="card-body">
-                      <button type="button" class="btn btn-dark">Ir al carrito</button>
-                  </div>
-              </div>
-          </div>
-          <!-- Tarjeta 4 -->
-          <div class="col-md-3">
-              <div class="card border-0">
-                  <i class="fa-regular fa-heart text-dark fa-1x justify-content-end mt-1 margin-right 2"></i>
-                  <h5 class="card-title text-start ms-3 ">Ginko Forte</h5>
-                  <img src="img/GINKGO_FORTE_X_3__COMP.png" class="card-img-top" alt="Imagen 4">
-                  <div class="card-body">
-                       <button type="button" class="btn btn-dark">Ir al carrito</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+<<!-- Tarjetas con imágenes -->
+<div class="container mt-5">
+    <div class="row">
+        <!-- Tarjeta 1 -->
+        <div class="col-md-3">
+            <div class="card border-0 position-relative">
+                <!-- Título alineado a la izquierda -->
+                <h5 class="card-title text-start ms-3">Actron 2%</h5>
+
+                <!-- Imagen -->
+                <img src="img/ACTRON pedia╠ütrico 4%_2.png" class="card-img-top" alt="Imagen 1">
+
+                <!-- Corazón a la izquierda, ajustado con position-absolute -->
+                <button class="favorite-btn border-0 bg-white position-absolute top-0 start-0 ms-3 mt-3">
+                    <i class="fa-regular fa-heart text-dark fa-2x"></i>
+                </button>
+
+                <!-- Botón en la parte inferior de la tarjeta -->
+                <div class="card-body">
+                    <button type="button" class="btn btn-dark w-100">Ir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="col-md-3">
+            <div class="card border-0 position-relative">
+                <!-- Título alineado a la izquierda -->
+                <h5 class="card-title text-start ms-3">Etidiol 2%</h5>
+
+                <!-- Imagen -->
+                <img src="img/Etidol-Suspension-Ibuprofeno-200-mg-B.jpg" class="card-img-top" alt="Imagen 2">
+
+                <!-- Corazón a la izquierda, ajustado con position-absolute -->
+                <button class="favorite-btn border-0 bg-white position-absolute top-0 start-0 ms-3 mt-3">
+                    <i class="fa-regular fa-heart text-dark fa-2x"></i>
+                </button>
+
+                <!-- Botón en la parte inferior de la tarjeta -->
+                <div class="card-body">
+                    <button type="button" class="btn btn-dark w-100">Ir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="col-md-3">
+            <div class="card border-0 position-relative">
+                <!-- Título alineado a la izquierda -->
+                <h5 class="card-title text-start ms-3">Bagohepat</h5>
+
+                <!-- Imagen -->
+                <img src="img/bagohepat-gts-x-45-ml.jpg" class="card-img-top" alt="Imagen 3">
+
+                <!-- Corazón a la izquierda, ajustado con position-absolute -->
+                <button class="favorite-btn border-0 bg-white position-absolute top-0 start-0 ms-3 mt-3">
+                    <i class="fa-regular fa-heart text-dark fa-2x"></i>
+                </button>
+
+                <!-- Botón en la parte inferior de la tarjeta -->
+                <div class="card-body">
+                    <button type="button" class="btn btn-dark w-100">Ir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="col-md-3">
+            <div class="card border-0 position-relative">
+                <!-- Título alineado a la izquierda -->
+                <h5 class="card-title text-start ms-3">Benzocaina</h5>
+
+                <!-- Imagen -->
+                <img src="img/Benzocaina.png" class="card-img-top" alt="Imagen 4">
+
+                <!-- Corazón a la izquierda, ajustado con position-absolute -->
+                <button class="favorite-btn border-0 bg-white position-absolute top-0 start-0 ms-3 mt-3">
+                    <i class="fa-regular fa-heart text-dark fa-2x"></i>
+                </button>
+
+                <!-- Botón en la parte inferior de la tarjeta -->
+                <div class="card-body">
+                    <button type="button" class="btn btn-dark w-100">Ir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
      <!-- Footer -->
   
     <footer class="bg-light text-dark py-5 mt-4">
